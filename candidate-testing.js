@@ -18,13 +18,13 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-let candidateName = input.question("Enter your first name. ");
+let candidateName = input.question("Enter your first name.");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 console.log(question);
-let candidateAnswer = input.question("Enter your response. ");
+let candidateAnswer = input.question("Enter your response.");
 
 }
 
