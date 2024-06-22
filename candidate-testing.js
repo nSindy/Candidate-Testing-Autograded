@@ -16,25 +16,27 @@ let correctAnswers;
 let candidateAnswers;
 
 
+
+
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-let candidateName = input.question("Enter your first name.");
+candidateName = input.question("Enter your first name. ");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 console.log(question);
-let candidateAnswer = input.question("Enter your response.");
+candidateAnswer = input.question("Enter your response. ");
 
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer = "Sally Ride"){
+if (candidateAnswer === "Sally Ride"){
   console.log("Great job! Sally Ride was indeed the first American woman in space.");
 } else {
-  console.log("Nice try. Feel free to look up the answer and try again.");
+  console.log("Incorrect.");
 }
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
