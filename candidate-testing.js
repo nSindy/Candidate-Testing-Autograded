@@ -33,7 +33,7 @@ candidateAnswer = input.question("Enter your response. ");
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer === "Sally Ride"){
+if (candidateAnswer === correctAnswer){
   console.log("Great job! Sally Ride was indeed the first American woman in space.");
 } else {
   console.log("Incorrect.");
