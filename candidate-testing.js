@@ -39,18 +39,31 @@ for (let i = 0; i < questions.length; i++){
   candidateAnswers.push(answers);
   }
   
-  return candidateAnswers;
+  return candidateAnswers.join(', ').toLocaleLowerCase().split(', ');
 }
 
 
 function gradeQuiz(candidateAnswers) {
+  let checkAnswersInput = candidateAnswers.join(', ').toLowerCase().split(', ');
+  let checkAnswersCorrect = correctAnswers.join(', ').toLowerCase().split(', ');
+  let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
+  let answeredCorrect = 0;
+  let answeredWrong = 0;
 
+  for (i = 0; i <questions.length; i++){
+    if (checkAnswersInput[i] === checkAnswersCorrect[i]){
+      answeredCorrect += 1;
+    } else answeredWrong += 1;
+  }
+
+  grade = answeredCorrect/questions.length*100;
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-console.log(`You answered: ${candidateAnswers.join(', ')}. The correct answers are: ${correctAnswers.join(', ')}.`);
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
+console.log(`You answered: ${candidateAnswers}. The correct answers are: ${correctAnswers}.`);
+if (grade >= 80){
+  console.log(`Congratulations! You correctly answered ${answeredCorrect} out of ${questions.length} questions. Your grade is ${grade} percent. You have passed!`);
+} else { 
+  console.log(`You correctly answered ${answeredCorrect} out of ${questions.length} questions. Your grade is ${grade} percent. You have failed.`);
+}
   return grade;
 }
 
